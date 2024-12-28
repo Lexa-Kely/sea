@@ -1,0 +1,157 @@
+@import helpers/vars
+@import helpers/mixins
+@import components/header
+@import components/footer
+
+//Main style
+html
+    body
+        font-family: Rubik
+        background: #f4f7f9
+
+h2
+    font-size: 2.25rem
+    letter-spacing: 0.125rem
+    line-height: 2.5rem
+
+button
+    padding: 10px 25px
+
+figure
+    position: relative
+    .card-description
+        padding: 0 20px
+
+section
+    img,svg
+        margin: 20px 0
+
+.block-price
+    background-color: #f8f9fa
+    color: #212529
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+    text-align: center
+    border-radius: 0.5rem
+    border: 1px solid #ddd
+    font-size: 0.85rem
+    max-width: 200px
+    padding: 1rem
+    align-self: flex-end
+
+.main-down
+    background: url(../img/banner-main.webp) no-repeat
+    background-size: cover
+    padding: 100px 0
+
+.zxc
+    border: 2px solid $secondary-color
+    background: transparent
+    color: $secondary-color
+
+.row
+    .description
+        width: 50%
+
+.row
+    .client-word
+        text-align: center
+        small
+            display: block
+            font-size: 0.875rem
+            line-height: 1.188rem
+            color: #999999
+
+.description
+    h2,span
+        font-size: 3.5rem
+        letter-spacing: 0.125rem
+        line-height: 4.125rem
+        text-transform: uppercase
+
+.row
+    .card
+        border-radius: 8px
+        overflow: hidden
+
+    .card-title
+        font-size: 1.1rem
+        font-weight: bold
+
+    .card-text
+        font-size: 0.9rem
+        color: #555
+
+    .card-img-top
+        height: 200px
+        object-fit: cover
+
+.triangle
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    width: 0
+    height: 0
+    border-left: 30px solid #26cb15
+    border-top: 30px solid #26cb15
+    border-right: 30px solid transparent
+    border-bottom: 30px solid transparent
+    .star
+        left: -18px
+        position: absolute
+        top: -22px
+.client
+    position: relative
+    &:before,
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        opacity: 0.102
+        border: 4px solid #fff
+        width: 36%
+        height: 100%
+    &::before
+        left: 0
+        border-right: none
+    &::after
+        right: 0
+        border-left: none
+
+.con
+    position: relative
+    &:before,
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        border: 4px solid $main-color
+        width: 21%
+        height: 120%
+    &::before
+        left: 0
+        border-right: none
+    &::after
+        right: 0
+        border-left: none
+    h5
+        transform: translate(25%, -50%)
+
+.round-human
+    position: absolute
+    transform: translate(-50%, -20%)
+
+.quote
+    left: 47%
+    position: absolute
+    top: -15%
+
+.info-card 
+    min-width: 250px
+    position: relative
+    img
+        position: absolute
+        left: 6%
+
+.round-woman
+    transform: translate(65%, -20%)

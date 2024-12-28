@@ -1,0 +1,54 @@
+header
+    background: url(/img/banner.webp) no-repeat
+    background-size: cover
+    margin-bottom: 100px
+
+.select
+    font-size: 2.25rem
+    letter-spacing: 0.063rem
+    line-height: 2.75rem
+    text-transform: uppercase
+
+.card
+    &:hover
+        transform: scale(1.03)
+        transition: 0.3s ease
+
+.block-header
+    padding: 180px 0
+    position: relative
+li:hover
+    color: #000
+
+.block-header::before
+    content: ""
+    position: absolute
+    left: 50%
+    top: 115px
+    width: 450px
+    height: 36px
+    border: 4px solid rgba(255,255,255,0.3)
+    border-bottom: none
+    transform: translate(-50%, 0)
+
+.block-header::after
+    content: ""
+    position: absolute
+    left: 50%
+    bottom: 132px
+    width: 450px
+    height: 90px
+    border: 4px solid rgba(255,255,255,0.4)
+    border-top: none
+    transform: translate(-50%, 0)
+
+.header-p
+    width: 36%
+
+.forwarding
+    padding-top: 250px
+    h2
+        font-size: 2.25rem
+        letter-spacing: 0.125rem
+        line-height: 2.75rem
+        color: #333333

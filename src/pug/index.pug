@@ -1,0 +1,142 @@
+//- home page
+
+extends templates/layout
+
+block seo 
+    //- SEO content
+
+block content
+    .container
+        .row.text-center.d-flex.justify-content-between.flex-wrap.align-items-start
+            .col-lg-3.col-md-4.col-sm-6.mb-3.text-start
+                h2.heading.text-uppercase.primary-heading Про нашу компанію
+                p.text-muted Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                +button("детальніше","my-3")
+                p.text-black-50 * - зверніть увагу, зміна ціни може залежати від курсу долара.
+            .col-lg-3.col-md-4.col-sm-6.mb-3
+                figure 
+                    figcaption 
+                        section 
+                            .border-0.text-center
+                                svg(width="60" height="60")
+                                    use(xlink:href="#icon-example")
+                                h4 Тур на велосипедах
+                                p.text-primary 335 грн*
+                                p.text-muted.text-start.card-description Подорожуючи на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.
+
+            .col-lg-3.col-md-4.col-sm-6.mb-3
+                figure
+                    figcaption 
+                        .border-0.text-center
+                            div.triangle
+                                svg.star(width="20" height="20")
+                                    use(xlink:href="#white-star")
+                            section
+                                img(src="img/dot.png", alt="")
+                                h4 Екскурсія на острів
+                                p.text-primary 500 грн*
+                                p.text-muted.text-start.card-description Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року.
+                                a.text-primary.text-decoration-none(href="#") дивитися усі плани &rarr;
+
+            .col-lg-3.col-md-4.col-sm-6.mb-3
+                figure
+                    figcaption 
+                        .border-0.text-center
+                            div.triangle
+                                svg.star(width="20" height="20")
+                                    use(xlink:href="#white-star")
+                            section
+                                img(src="img/message.png", alt="")
+                                h4 Особливе замовлення
+                                p.text-primary 250 грн*
+                                p.text-muted.text-start.card-description Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші. 
+
+        hr.my-5
+
+        .row.align-items-center
+            .col-lg-4.col-12.mb-4.text-center
+                img.img-fluid(src="/img/ostriv.webp" alt="Дивовижний острів")
+            .col-lg-5.col-12.mb-4
+                h2.text-uppercase.fw-bold.fs-4.text-lg-start.text-center Дивовижний безлюдний острів, який зводить людей з розуму
+                p.mt-3.fs-5.text-lg-start.text-center Пхукет – курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище – буйна тропічна рослинність. Все це можна побачити на власні очі.
+                .d-flex.flex-wrap.gap-2.justify-content-center.justify-content-lg-start.mt-3
+                    +button("замовити тур","")
+                    a.btn.btn-outline-primary.btn-lg.rounded-5(href="#") Детальніше
+            .col-lg-3.col-12.text-lg-start.text-center
+                .bg-light.p-4.rounded.shadow
+                    h3.text-primary.fw-bold 575 грн./день
+                    p.mt-2.text-muted В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+
+
+                            
+
+    section.text-start.hero-section.text-white.text-center.main-down
+        .container.text-start
+            .row.align-items-center.justify-content-between
+                .col-lg-6.col-md-12.description.text-center.text-lg-start
+                    h2.d-inline СПІЙМАЙ ХВИЛЮ
+                        br
+                        span.text-primary ЖИВИ ЯСКРАВО!
+                    p.mb-4.fs-5.fs-md-4.fs-lg-5 Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сёрфборд, але ніяк не міг наважитись? Наші досвідчені інструктори навчать тебе сміливо «піймати хвилі» та відчути себе справжнім сёрфером!
+                    +button("детальніше", "")
+                .col-lg-6.col-md-12.client.mt-4.mt-lg-0.text-center
+                    blockquote.blockquote.ada.p-3.rounded
+                        img(src="/img/quote.png", alt="").quote
+                        p.mt-3.fs-5 Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють справжні професіонали своєї справи.
+                        footer.mt-3.text-white.client-word
+                            cite
+                                span.d-block Олег Набережний
+                                small.text-muted клієнт
+                            img.rounded-circle.mt-2.round-human(src="/img/client.png" alt="client")
+
+
+
+    .container.py-5
+        .text-center.my-4
+            h2 СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ ТИЖНЯ
+            p.text-muted Гарячі пропозиції, по-швидше обирай і поїхали!
+
+        .row.gy-4
+            //- Картка 1
+            +card("/img/romantic.png","Романтична подорож", "Романтична подорож на 2","Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.","2599","#","ЗАМОВИТИ" )
+    
+            //- Картка 2
+            +card("/img/velotyr.png","Велотур", "Велотур","Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!","555","#","ЗАМОВИТИ" )
+
+            //- Картка 3
+            +card("/img/toisland.png","На острови", "На острови!","Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!","1559","#","ЗАМОВИТИ" )
+
+            //- Картка 4
+            +card("/img/serf.png","Катання на серфінгу", "Катання на серфінгу","Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!","999","#","ЗАМОВИТИ" )
+    .container
+        .info-section
+            .container
+                .row.align-items-start.g-4
+                    .col-md-6.col-lg-3
+                        h3.yellow-underline.text-center.text-md-start ДОДАТКОВА ІНФОРМАЦІЯ
+
+                    .col-md-6.col-lg-3
+                        .card-footer.info-card.text-center.p-3.text-light
+                            img(src="img/file.png", alt="")
+                            h5 Графік роботи <br> готелів.xls
+                            p Розмір файла: 10Mb
+                            p Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
+                            a.btn.btn-outline-warning.mt-2(href="#") СКАЧАТИ
+
+                    .col-md-6.col-lg-3
+                        .card-footer-two.info-card.text-center.p-3.text-light
+                            img(src="img/file.png", alt="")
+                            h5 Інформація про харчування.xls
+                            p Розмір файла: 10Mb
+                            p У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додатково, то ознайомтесь з умовами.
+                            a.btn.btn-outline-warning.mt-2(href="#") СКАЧАТИ
+
+                    .col-md-6.col-lg-3.con
+                        h5.text-center.text-md-start задати питання
+                        .contact-card.text-center.p-3
+                            p.text-muted Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                            svg(width="18" height="18" xmlns="http://www.w3.org/2000/svg")
+                                use(xlink:href="#icon-id" fill="#0099ff")
+                            a.d-inline.fs-5.fw-bold.text-primary(href="tel:+380505059511") +38 (050) 56 98 511
+                            p.mt-1 Анна Миколаївна
+                            img.rounded-circle.round-woman.mx-auto.d-block.mt-3.round-human(src="/img/consultat.png", alt="Анна Миколаївна")
