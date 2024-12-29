@@ -9,7 +9,7 @@ block content
     .container
         .row.text-center.d-flex.justify-content-between.flex-wrap.align-items-start
             .col-lg-3.col-md-4.col-sm-6.mb-3.text-start
-                h2.heading.text-uppercase.primary-heading Про нашу компанію
+                h2.heading.text-uppercase.primary-heading.fw-normal Про нашу компанію
                 p.text-muted Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
                 +button("детальніше","my-3")
                 p.text-black-50 * - зверніть увагу, зміна ціни може залежати від курсу долара.
@@ -21,7 +21,7 @@ block content
                                 svg(width="60" height="60")
                                     use(xlink:href="#icon-example")
                                 h4 Тур на велосипедах
-                                p.text-primary 335 грн*
+                                span.text-primary 335 грн*
                                 p.text-muted.text-start.card-description Подорожуючи на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.
 
             .col-lg-3.col-md-4.col-sm-6.mb-3
@@ -34,9 +34,11 @@ block content
                             section
                                 img(src="img/dot.png", alt="")
                                 h4 Екскурсія на острів
-                                p.text-primary 500 грн*
+                                span.text-primary 500 грн*
                                 p.text-muted.text-start.card-description Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року.
-                                a.text-primary.text-decoration-none(href="#") дивитися усі плани &rarr;
+                                a.text-primary.text-decoration-none(href="#") дивитися усі плани 
+                                    svg(width="16" height="16")
+                                        use(href="#icon-arrow")
 
             .col-lg-3.col-md-4.col-sm-6.mb-3
                 figure
@@ -48,7 +50,7 @@ block content
                             section
                                 img(src="img/message.png", alt="")
                                 h4 Особливе замовлення
-                                p.text-primary 250 грн*
+                                span.text-primary 250 грн*
                                 p.text-muted.text-start.card-description Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші. 
 
         hr.my-5
