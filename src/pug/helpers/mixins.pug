@@ -1,18 +1,17 @@
 mixin button($text="", $class="")
-    button.bg-warning.rounded-5.main_button.fs-6.text-light.text-center.text-uppercase.border.border-0(class=$class) #{$text}
+    button.rounded-5.main_button.fs-6.text-light.text-center.text-uppercase.border.border-0(class=$class) #{$text}
 
 mixin card(image, alt, title, description, price, link, linkText)
   .col-12.col-sm-6.col-md-4.col-lg-3.mb-4
-    .card.shadow-sm
-      .position-relative
-        img.card-img-top(src=image, alt=alt)
-        div.triangle
-          svg.star(width="20" height="20")
-            use(xlink:href="#white-star")
-      .card-body
-        h5.card-title= title
-        p.card-text= description
-        h4.text-primary.d-inline.pe-5= `${price} грн.`
-        a.text-decoration-none.text-warning.pe-1(href=link)= linkText
-        svg(width="16" height="16")
-          use(href="#icon-arrow")
+    .position-relative
+      img.card-img-top(src=image, alt=alt)
+      div.triangle
+        svg.star(width="20" height="20")
+          use(xlink:href="#white-star")
+    .card-body.p-3
+      h5.card-title.fw-normal.pb-2= title
+      p.card-text= description
+      h4.text-primary.d-inline.pe-5= `${price} грн.`
+      a.text-decoration-none.text-warning.pe-1(href=link)= linkText
+      svg(width="16" height="16")
+        use(href="#icon-arrow")

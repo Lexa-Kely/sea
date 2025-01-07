@@ -8,6 +8,8 @@ html
     body
         font-family: Rubik
         background: #f4f7f9
+    hr
+        color: $border-block-color
 
 h2
     font-size: 2.25rem
@@ -25,7 +27,7 @@ figure
 section
     img
         margin: 20px 0
-    svg 
+    svg
         margin: 15px 0
     span
         font-size: 1.625rem
@@ -34,8 +36,8 @@ section
         line-height: 1.188rem
         color: #999999
 
-a 
-    svg 
+a
+    svg
         fill: $secondary-color
 
 .block-price
@@ -50,6 +52,13 @@ a
     padding: 1rem
     align-self: flex-end
 
+.block-island
+    background-color: #edf2f5
+
+.island-description
+    p:first-child
+        color: $secondary-color
+
 .main-down
     background: url(../img/banner-main.webp) no-repeat
     background-size: cover
@@ -62,7 +71,9 @@ a
 
 .row
     .description
-        width: 50%
+        width: 45%
+    .info
+        width: 80%
 
 .row
     .client-word
@@ -71,7 +82,7 @@ a
             display: block
             font-size: 0.875rem
             line-height: 1.188rem
-            color: #999999
+            color: #999
 
 .description
     h2,span
@@ -79,6 +90,14 @@ a
         letter-spacing: 0.125rem
         line-height: 4.125rem
         text-transform: uppercase
+    p
+        font-size: 1rem
+        line-height: 1.5rem
+        font-family: "PT Sans"
+blockquote
+    p
+        line-height: 1.625rem
+        font-family: "Rubik"
 
 .row
     .card
@@ -113,7 +132,6 @@ a
         position: absolute
         top: -22px
 .client
-    position: relative
     &:before,
     &:after
         content: ''
@@ -131,7 +149,6 @@ a
         border-left: none
 
 .con
-    position: relative
     &:before,
     &:after
         content: ''
@@ -139,7 +156,7 @@ a
         top: 0
         border: 4px solid $main-color
         width: 21%
-        height: 120%
+        height: 300px
     &::before
         left: 0
         border-right: none
@@ -147,7 +164,7 @@ a
         right: 0
         border-left: none
     h5
-        transform: translate(25%, -50%)
+        transform: translate(0, -50%)
 
 .round-human
     position: absolute
@@ -160,14 +177,32 @@ a
 
 .info-card
     min-width: 250px
+    height: 300px
     position: relative
     img
         position: absolute
-        left: 6%
+        left: 5%
+    span
+        font-size: 0.813rem
+        line-height: 1.188rem
+        color: #bbb
 
-.card-body 
+.card-body
     svg
         fill: $main-color
+
+.contact-card
+    svg
+        rotate: 90deg
+    .work-trafic
+        p
+            font-size: 1.25rem
+            display: block
+            padding-right: 39px
+        span 
+            padding-right: 18px
+.margin
+    margin-bottom: 40px 
 
 .round-woman
     transform: translate(65%, -20%)
