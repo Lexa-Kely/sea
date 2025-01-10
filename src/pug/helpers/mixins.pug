@@ -1,5 +1,5 @@
 mixin button($text="", $class="")
-    button.rounded-5.main_button.fs-6.text-light.text-center.text-uppercase.border.border-0(class=$class) #{$text}
+    button.rounded-5.main_button.fs-6.text-light.text-center.text-uppercase.border.border-0.main-button(class=$class) #{$text}
 
 mixin card(image, alt, title, description, price, link, linkText)
   .col-12.col-sm-6.col-md-4.col-lg-3.mb-4
@@ -15,3 +15,6 @@ mixin card(image, alt, title, description, price, link, linkText)
       a.text-decoration-none.text-warning.pe-1(href=link)= linkText
       svg(width="16" height="16")
         use(href="#icon-arrow")
+
+mixin button_main_down($text="СКАЧАТИ")
+  a.position-relative.text-decoration-none.mt-2.rounded-5.hotel(href="#")= $text

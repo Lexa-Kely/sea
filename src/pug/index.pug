@@ -57,7 +57,7 @@ block content
 
         .container.mb-5  
             .row
-                .col-lg-4.p-0
+                .col-lg-6.p-0.col-xxl-4
                     img.w-full.phuket-photo(src="img/ostriv.webp", alt="Пхукет фото пейзажу")
                 .col.p-0.m-0
                     .container  
@@ -123,11 +123,11 @@ block content
     .container
         .info-section
             .container
-                .row.align-items-start.g-4
-                    .col-md-6.col-lg-3
+                .row.align-items-start.g-4.flex-wrap
+                    .col-md-6.col-lg-4.col-xl-4.col-xxl-3
                         h3.fw-normal.yellow-underline.text-center.text-md-start ДОДАТКОВА ІНФОРМАЦІЯ
 
-                    .col-md-6.col-lg-3
+                    .col-md-6.col-lg-4.col-xl-4.col-xxl-3
                         .card-footer.info-card.text-center.p-3.text-light
                             img(src="img/file.png", alt="Іконка файлу")
                             .work-trafic
@@ -136,9 +136,9 @@ block content
                                 span.pe-3 Розмір файла: 10Mb
                             p.text-start.margin Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
                             .block.d-flex
-                                a.btn.btn-outline-warning.mt-2.rounded-5(href="#") СКАЧАТИ
+                                +button_main_down("СКАЧАТИ")
 
-                    .col-md-6.col-lg-3
+                    .col-md-6.col-lg-4.col-xl-4.col-xxl-3
                         .card-footer-two.info-card.text-center.p-3.text-light
                             img(src="img/file.png", alt="Іконка файлу")
                             h5.m-0 Інформація про харчування.xls
@@ -146,9 +146,9 @@ block content
                                 span.fw-normal Розмір файла: 10Mb
                             p.text-start У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додатково, то ознайомтесь з умовами.
                             .block.d-flex
-                                a.btn.btn-outline-warning.mt-2.rounded-5(href="#") СКАЧАТИ
+                                +button_main_down("СКАЧАТИ")
 
-                    .col-md-6.col-lg-3.position-relative.con
+                    .col-md-6.col-lg-4.position-relative.con.col-xl-4.col-xxl-3
                         h5.text-center.m-0 задати питання
                         .contact-card.d-flex.flex-column.align-items-center.text-center.p-3
                             p.text-muted Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання

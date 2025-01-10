@@ -16,8 +16,28 @@ h2
     letter-spacing: 0.125rem
     line-height: 2.5rem
 
+h5
+
 button
     padding: 10px 25px
+
+.main-button
+    position: relative
+    &:hover
+        color: #fff
+
+    &::after
+        content: ''
+        position: absolute
+        left: 25px
+        bottom: 12px
+        width: 0 // Початкова ширина
+        height: 2px
+        background-color: #fff
+        transition: width 0.4s ease-in-out // Плавна зміна ширини з анімацією
+
+    &:hover::after
+        width: 70% // Плавно розширюється на всю ширину
 
 figure
     position: relative
@@ -34,7 +54,7 @@ section
     p
         font-size: 0.813rem
         line-height: 1.188rem
-        color: #999999
+        color: #999
 
 a
     svg
@@ -148,6 +168,13 @@ blockquote
         right: 0
         border-left: none
 
+ul
+    li::hover
+        text-decoration: underline
+
+.work-trafic
+    max-width: 308px
+
 .con
     &:before,
     &:after
@@ -199,10 +226,36 @@ blockquote
             font-size: 1.25rem
             display: block
             padding-right: 39px
-        span 
+        span
             padding-right: 18px
 .margin
-    margin-bottom: 40px 
+    margin-bottom: 40px
+
+.padding
+    padding: 0 20px
+
+.hotel
+    width: 130px
+    border: 2px solid $main-color
+    color: $main-color
+    padding: 5px 0 5px 10px
+    transition: 0.2s
+    &:hover
+        color: #000
+        background: $main-color
+
+.hotel:before
+    content: ""
+    width: 20px
+    height: 20px
+    position: absolute
+    background: url(../img/cloud.png)
+    background-repeat: no-repeat
+    left: 12px
+    bottom: 2px
 
 .round-woman
     transform: translate(65%, -20%)
+
+a
+    padding: 0
